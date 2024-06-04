@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup as BS
 import pymongo
 import base64
 
-bot = telebot.TeleBot("6751068161:AAEMmMxizBGaqj96IZh0xOYBQw4uhQyhvoo")
+bot = telebot.TeleBot("6740909089:AAFsHKxhG0YXTSBXG1RJStcp8SdIxyavhUw")
 connect = pymongo.MongoClient("mongodb://localhost:27017")
 db = connect["Film_bot"]
 document = db["info_film"]
