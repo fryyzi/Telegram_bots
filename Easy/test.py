@@ -1,10 +1,8 @@
-import telebot
+import gi
+gi.require_version("Gtk", "3.0")
+from gi.repository import Gtk
 
-bot = telebot.TeleBot("6271631030:AAE50Ty4Aib5xvRlTCh20dXxo-p6E7PrTPg")
-
-@bot.message_handler(commands=["start"])
-def start(message):
-    bot.send_message(message.chat.id, "test")
-
-
-bot.polling(non_stop=True)
+win = Gtk.Window(title="Hello World")
+win.connect("destroy", Gtk.main_quit)
+win.show_all()
+Gtk.main()
